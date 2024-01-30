@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 30%;
+  &__textarea {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    transition: height 1s ease;
+  }
+  &__textarea--false {
+    height: 100%;
+    transition: height 1.5s ease;
+  }
+  &__field {
+    height: 100%;
+  }
+}
+
+.fieldset {
+  height: 100%;
+  overflow: hidden;
+  &__elements-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 40px;
+    width: 100%;
+    background-color: #3865af;
+    cursor: pointer;
+  }
+  &__elements-arrow {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    transform: rotate(-45deg);
+    width: 5px;
+    height: 5px;
+  }
+
+  &__elements-inner {
+    position: absolute;
+    width: 100%;
+  }
+
+  &__colors-inner {
+    display: flex;
+    padding: 15px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 200;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+
+  &__input {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  &__color-picker {
+    position: absolute;
+    left: 5px;
+    top: 75px;
+  }
+}
+
+.fieldset--close {
+  height: auto;
+}
