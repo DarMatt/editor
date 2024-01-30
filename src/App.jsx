@@ -9,7 +9,7 @@ function App() {
   const setElement = (el) => {
     setLayout(el);
   };
-  console.log("layout:", layout);
+
   return (
     <section className="wrapper">
       <ContentView contentRef={contentRef} layout={layout} />

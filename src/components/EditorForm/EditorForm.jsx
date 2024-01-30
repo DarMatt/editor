@@ -42,18 +42,12 @@ export const EditorForm = ({ setElement, contentRef }) => {
     setColorKey(name);
     setPickerPosition(clientY);
   };
-  console.log("border:", border);
-  console.log("colorKey:", colorKey);
+
   const handleChange = ({ target: { value } }) => {
     setValue(value);
   };
 
   const handlePickerChange = (color) => {
-    console.log("color", color);
-    console.log(
-      'LOGIC-CUT',
-      Object.values(border).slice(0, 1).join(' ') + ` ${color.hex}`
-    );
     contentRef.current.style[colorKey] =
       colorKey === "border"
         ? Object.values(border).slice(0, 1).join(' ') + ` ${color.hex}`
